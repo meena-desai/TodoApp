@@ -37,21 +37,10 @@ export default function AddToDo(props) {
                 {props.isEdit === true ? `Edit Todo` : `Add Todo`}
             </DialogTitle>
             <DialogContent>
-                <TextField
-                    id="title"
-                    label="Todo Title"
-                    placeholder="Title"
-                    margin="normal"
-                    fullWidth
-                    value={title}
-                    onChange={(e) => onTitleChange(e)}
-                />
+                <TextField id="title" label="Todo Title" placeholder="Title" margin="normal"
+                    fullWidth value={title} onChange={(e) => onTitleChange(e)}/>
 
-                <TextField
-                    id="date"
-                    label="Deadline"
-                    type="date"
-                    value={deadline}
+                <TextField id="date" label="Deadline" type="date" value={deadline}
                     onChange={(e) => onTitleChange(e)}
                     InputProps={{inputProps: { min: moment().format('YYYY-MM-DD')} }}
                     InputLabelProps={{
